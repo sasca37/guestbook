@@ -47,7 +47,7 @@ public class GuestbookRepositoryTests {
         }
     }
 
-
+    @Test
     public void testQuery1() {
         Pageable pageable = PageRequest.of(0, 10, Sort.by("gno").descending());
         //1 : 동적 처리를 위한 Q도메인 클래스 불러옴. 사용시 Entity 필드의 값을 변수로 사용할 수 있음
