@@ -25,6 +25,7 @@ public class PageResultDTO<DTO, EN> {
     private boolean prev, next;
     //페이지 번호 목록
     private List<Integer> pageList;
+    //Function : EN  매개변수 , DTO 리턴타입
     public PageResultDTO(Page<EN> result, Function<EN, DTO> fn) {
         dtoList = result.stream().map(fn).collect(Collectors.toList());
         totalPage = result.getTotalPages();
